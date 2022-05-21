@@ -1,0 +1,19 @@
+{
+  "name": "easepick-docs",
+  "version": "0.0.1",
+  "description": "Date picker - tiny size, no dependencies",
+  "main": "index.js",
+  "authors": {
+    "name": "Rinat G.",
+    "email": ""
+  },
+  "repository": "https://github.com/easepick/docs/easepick-docs",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
