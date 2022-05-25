@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input :id="id" />
+    <input :id="id" :style="input_styles" />
   </div>
 </template>
 
@@ -45,6 +45,8 @@ export default {
         };
 
         this.picker = new easepick.create(opts);
+
+        this.$emit('ready');
       } else {
         setTimeout(this.init, 300);
       }

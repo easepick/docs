@@ -28,32 +28,77 @@ module.exports = {
    */
   themeConfig: {
     repo: 'https://github.com/easepick/easepick/',
-    editLinks: false,
+    editLinks: true,
+    docsRepo: 'https://github.com/easepick/docs/',
     docsDir: '',
     editLinkText: '',
-    lastUpdated: false,
+    lastUpdated: true,
     nav: [
       {
         text: 'Guide',
         link: '/guide/',
       },
+    ],
+    sidebar: [
+      ['/guide/', 'Guide'],
+      ['/configurator/', 'Configurator'],
       {
-        text: 'Configurator',
-        link: '/config/'
+        title: 'Packages',
+        path: '/packages/',
+        collapsable: true,
+        children: [
+          {
+            title: '@easepick/bundle',
+            path: '/packages/bundle',
+          },
+        ],
+      },
+      {
+        title: 'Development',
+        path: '/development/',
+        collapsable: true,
+        children: [
+          {
+            title: 'Environment',
+            path: '/development/',
+          },
+          {
+            title: 'Creating plugins',
+            path: '/development/plugins',
+          },
+        ],
+      },
+      {
+        title: 'Support',
+        path: '/support/',
+        collapsable: true,
+        children: [
+          {
+            title: 'Getting support',
+            path: '/support/',
+          },
+          {
+            title: 'Reporting issues',
+            path: '/support/reporting-issues',
+          },
+          {
+            title: 'License',
+            path: '/license',
+          },
+        ],
+      },
+      {
+        title: 'Examples',
+        path: '/examples/',
+        collapsable: true,
+        children: [
+          {
+            title: 'Basic example',
+            path: '/examples/basic',
+          },
+        ],
       },
     ],
-    sidebar: {
-      '/guide/': [
-        {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-            'using-vue',
-          ]
-        }
-      ],
-    }
   },
 
   /**

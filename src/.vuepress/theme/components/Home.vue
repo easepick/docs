@@ -4,7 +4,6 @@
     :aria-labelledby="data.heroText !== null ? 'main-title' : null"
   >
     <header class="hero">
-
       <h1 v-if="data.heroText !== null" id="main-title">
         {{ data.heroText || $title || "Hello" }}
       </h1>
@@ -13,11 +12,14 @@
         {{ data.tagline || $description || "Welcome to your VuePress site" }}
       </p>
 
-      <div class="hero-easepick">
+      <div class="hero-easepick" style="min-height: 300px">
         <easepick
           :options="easepick_options"
           :input_styles="{ display: 'none' }"
+          @ready="easepick_loading = false"
         />
+
+        <Spinner v-if="easepick_loading" />
       </div>
 
       <p v-if="data.actionText && data.actionLink" class="action">
@@ -29,6 +31,7 @@
 
 <script>
 import NavLink from "@theme/components/NavLink.vue";
+import Spinner from "../../components/Spinner.vue";
 import easepick from "../../components/easepick.vue";
 
 export default {
@@ -36,11 +39,13 @@ export default {
 
   components: {
     NavLink,
+    Spinner,
     easepick,
   },
 
   data() {
     return {
+      easepick_loading: true,
       easepick_options: {
         inline: true,
         grid: 2,
