@@ -50,7 +50,7 @@ export default {
         inline: true,
         grid: 2,
         calendars: 2,
-        plugins: ["RangePlugin"],
+        plugins: ["RangePlugin", "KbdPlugin", "AmpPlugin"],
         setup(picker) {
           picker.on("select", (e) => console.log(e));
         },

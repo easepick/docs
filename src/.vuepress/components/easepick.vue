@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input :id="id" :style="input_styles" />
+    <input :id="id" />
   </div>
 </template>
 
@@ -9,11 +9,11 @@ export default {
   props: {
     options: {
       type: Object,
-      default: {},
+      default() {},
     },
     input_styles: {
       type: Object,
-      default: {},
+      default() {},
     },
   },
   data() {
@@ -44,10 +44,15 @@ export default {
           ...self.options,
         };
 
+        if ("css" in self.options) {
+          opts.css = [...self.default_options.css, ...self.options.css];
+        }
+
         this.picker = new easepick.create(opts);
 
-        this.$emit('ready');
+        this.$emit("ready");
       } else {
+        console.log("init", typeof easepick);
         setTimeout(this.init, 300);
       }
     },
