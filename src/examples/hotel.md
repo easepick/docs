@@ -1,5 +1,3 @@
-<autoversion/>
-
 # Basic hotel calendar
 
 ### Demo
@@ -72,3 +70,5 @@
   </body>
 </html>
 ```
+
+<autoversion/>

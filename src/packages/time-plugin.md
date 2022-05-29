@@ -1,14 +1,12 @@
-<autoversion/>
+# @easepick/time-plugin
 
-# @easepick/kbd-plugin
-
-[![npm version](https://badge.fury.io/js/@easepick%2Fkbd-plugin.svg)](https://www.npmjs.com/package/@easepick/kbd-plugin)
+[![npm version](https://badge.fury.io/js/@easepick%2Ftime-plugin.svg)](https://www.npmjs.com/package/@easepick/time-plugin)
 
 ::: tip
-This package does not need to be installed if you are using [@easepick/bundle](/guide/packages/bundle).
+This package does not need to be installed if you are using [@easepick/bundle](/packages/bundle).
 :::
 
-Adds keyboard navigation.
+Adds time picker.
 
 ## Quick example
 
@@ -21,7 +19,7 @@ Adds keyboard navigation.
     <script src="https://cdn.jsdelivr.net/npm/@easepick/datetime@[version.number]/dist/index.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@easepick/core@[version.number]/dist/index.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@easepick/base-plugin@[version.number]/dist/index.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@easepick/kbd-plugin@[version.number]/dist/index.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@easepick/time-plugin@[version.number]/dist/index.umd.min.js"></script>
   </head>
   <body>
     <input id="datepicker"/>
@@ -30,10 +28,11 @@ Adds keyboard navigation.
         element: document.getElementById('datepicker'),
         css: [
           'https://cdn.jsdelivr.net/npm/@easepick/core@[version.number]/dist/index.css',
+          'https://cdn.jsdelivr.net/npm/@easepick/time-plugin@[version.number]/dist/index.css',
         ],
-        plugins: ['KbdPlugin'],
-        KbdPlugin: {
-          dayIndex: 2,
+        plugins: ['TimePlugin'],
+        TimePlugin: {
+          format: 'HH:mm',
         },
       });
     </script>
@@ -46,7 +45,7 @@ Adds keyboard navigation.
 #### NPM
 
 ```bash
-npm install @easepick/core @easepick/kbd-plugin
+npm install @easepick/core @easepick/time-plugin
 ```
 
 #### CDN
@@ -55,7 +54,7 @@ npm install @easepick/core @easepick/kbd-plugin
 <script src="https://cdn.jsdelivr.net/npm/@easepick/datetime@[version.number]/dist/index.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@easepick/core@[version.number]/dist/index.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@easepick/base-plugin@[version.number]/dist/index.umd.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@easepick/kbd-plugin@[version.number]/dist/index.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@easepick/time-plugin@[version.number]/dist/index.umd.min.js"></script>
 ```
 
 ## Usage
@@ -64,14 +63,15 @@ If you’re using a bundler, e.g. [webpack](https://webpack.js.org/):
 
 ```ts
 import { easepick } from '@easepick/core';
-import { KbdPlugin } from '@easepick/kbd-plugin';
+import { TimePlugin } from '@easepick/time-plugin';
 
 const picker = new easepick.create({
   element: document.getElementById('datepicker'),
   css: [
     'https://cdn.jsdelivr.net/npm/@easepick/core@[version.number]/dist/index.css',
+    'https://cdn.jsdelivr.net/npm/@easepick/time-plugin@[version.number]/dist/index.css',
   ],
-  plugins: [KbdPlugin],
+  plugins: [TimePlugin],
 });
 ```
 
@@ -82,8 +82,9 @@ const picker = new easepick.create({
   element: document.getElementById('datepicker'),
   css: [
     'https://cdn.jsdelivr.net/npm/@easepick/core@[version.number]/dist/index.css',
+    'https://cdn.jsdelivr.net/npm/@easepick/time-plugin@[version.number]/dist/index.css',
   ],
-  plugins: ['KbdPlugin'],
+  plugins: ['TimePlugin'],
 });
 ```
 
@@ -91,5 +92,18 @@ const picker = new easepick.create({
 
 | Name | Type | Default | Description
 | --- | :---: | :---: | ---
-| [unitIndex](#option-unitIndex) | number | 1 | `tabIndex` for elements except days elements.
-| [dayIndex](#option-dayIndex) | number | 2 | `tabIndex` for days elements.
+| [seconds](#option-seconds) | boolean | false | Enable seconds picker.
+| [stepHours](#option-stepHours) | number | 1 | Step for hours.
+| [stepMinutes](#option-stepMinutes) | number | 5 | Step for minutes.
+| [stepSeconds](#option-stepSeconds) | number | 5 | Step for seconds.
+| [format12](#option-format12) | boolean | false | Display 12H time.
+
+## Methods
+
+| Name  | Description
+| --- | ---
+| [setTime](#method-setTime) | Set a time for single date picker.
+| [setStartTime](#method-setStartTime) | Set start time of date range.
+| [setEndTime](#method-setEndTime) | Set end time of date range.
+
+<autoversion/>

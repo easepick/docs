@@ -22,26 +22,26 @@ Date picker - tiny size, no dependencies
 
 | Name | Version | Description
 | --- | :---: | ---
-| [@easepick/bundle](/guide/packages/bundle) | ![npm version](https://badge.fury.io/js/@easepick%2Fbundle.svg) | **Bundle of easepick**. Includes all packages.<br/> An easy way to use all the features of `easepick`.
+| [@easepick/bundle](/packages/bundle) | ![npm version](https://badge.fury.io/js/@easepick%2Fbundle.svg) | **Bundle of easepick**. Includes all packages.<br/> An easy way to use all the features of `easepick`.
 
 ### Core
 
 | Name | Version | Description
 | --- | :---: | ---
-| [@easepick/core](/guide/packages/core) | ![npm version](https://badge.fury.io/js/@easepick%2Fcore.svg) | Main package of easepick. 
-| [@easepick/datetime](/guide/packages/datetime) | ![npm version](https://badge.fury.io/js/@easepick%2Fdatetime.svg) | DateTime package. 
-| [@easepick/base-plugin](/guide/packages/base-plugin) | ![npm version](https://badge.fury.io/js/@easepick%2Fbase-plugin.svg) | Base plugin of easepick. <br/> Required for other plugins and for development. 
+| [@easepick/core](/packages/core) | ![npm version](https://badge.fury.io/js/@easepick%2Fcore.svg) | Main package of easepick. 
+| [@easepick/datetime](/packages/datetime) | ![npm version](https://badge.fury.io/js/@easepick%2Fdatetime.svg) | DateTime package. 
+| [@easepick/base-plugin](/packages/base-plugin) | ![npm version](https://badge.fury.io/js/@easepick%2Fbase-plugin.svg) | Base plugin of easepick. <br/> Required for other plugins and for development. 
 
 ### Plugins
 
 | Name | Version | Description
 | --- | :---: | ---
-| [@easepick/amp-plugin](/guide/packages/amp-plugin) | ![npm version](https://badge.fury.io/js/@easepick%2Famp-plugin.svg) | Amp plugin. <br/> Adds extra options.
-| [@easepick/kbd-plugin](/guide/packages/kbd-plugin) | ![npm version](https://badge.fury.io/js/@easepick%2Fkbd-plugin.svg) | Keyboard plugin. <br/> Adds keyboard navigation.
-| [@easepick/lock-plugin](/guide/packages/lock-plugin) | ![npm version](https://badge.fury.io/js/@easepick%2Flock-plugin.svg) | Lock plugin. <br/> Adds the ability to disable days for selection.
-| [@easepick/preset-plugin](/guide/packages/preset-plugin) | ![npm version](https://badge.fury.io/js/@easepick%2Fpreset-plugin.svg) | Preset plugin. <br/> Adds predefined ranges.
-| [@easepick/range-plugin](/guide/packages/range-plugin) | ![npm version](https://badge.fury.io/js/@easepick%2Frange-plugin.svg) | Range plugin. <br/> Adds the ability to select a range of dates.
-| [@easepick/time-plugin](/guide/packages/time-plugin) | ![npm version](https://badge.fury.io/js/@easepick%2Ftime-plugin.svg) | Time plugin. <br/> Adds time picker.
+| [@easepick/amp-plugin](/packages/amp-plugin) | ![npm version](https://badge.fury.io/js/@easepick%2Famp-plugin.svg) | Amp plugin. <br/> Adds extra options.
+| [@easepick/kbd-plugin](/packages/kbd-plugin) | ![npm version](https://badge.fury.io/js/@easepick%2Fkbd-plugin.svg) | Keyboard plugin. <br/> Adds keyboard navigation.
+| [@easepick/lock-plugin](/packages/lock-plugin) | ![npm version](https://badge.fury.io/js/@easepick%2Flock-plugin.svg) | Lock plugin. <br/> Adds the ability to disable days for selection.
+| [@easepick/preset-plugin](/packages/preset-plugin) | ![npm version](https://badge.fury.io/js/@easepick%2Fpreset-plugin.svg) | Preset plugin. <br/> Adds predefined ranges.
+| [@easepick/range-plugin](/packages/range-plugin) | ![npm version](https://badge.fury.io/js/@easepick%2Frange-plugin.svg) | Range plugin. <br/> Adds the ability to select a range of dates.
+| [@easepick/time-plugin](/packages/time-plugin) | ![npm version](https://badge.fury.io/js/@easepick%2Ftime-plugin.svg) | Time plugin. <br/> Adds time picker.
 
 ---
 

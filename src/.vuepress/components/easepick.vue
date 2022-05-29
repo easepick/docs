@@ -17,7 +17,7 @@ export default {
     },
   },
   data() {
-    const ver = JSON.parse(localStorage.getItem("version")) || { v: "1.1.7" };
+    const ver = JSON.parse(localStorage.getItem("version")) || { v: "1.2.0" };
     return {
       id: `id-${new Date().getTime()}`,
       picker: null,

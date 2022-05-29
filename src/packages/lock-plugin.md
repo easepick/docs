@@ -1,11 +1,9 @@
-<autoversion/>
-
 # @easepick/lock-plugin
 
 [![npm version](https://badge.fury.io/js/@easepick%2Flock-plugin.svg)](https://www.npmjs.com/package/@easepick/lock-plugin)
 
 ::: tip
-This package does not need to be installed if you are using [@easepick/bundle](/guide/packages/bundle).
+This package does not need to be installed if you are using [@easepick/bundle](/packages/bundle).
 :::
 
 Adds the ability to disable days for selection.
@@ -103,3 +101,5 @@ const picker = new easepick.create({
 | [presets](#option-presets) | boolean | true | Disable unallowed presets (when PresetPlugin is included).
 | [inseparable](#option-inseparable) | boolean | false | Disable date range selection with locked days.
 | [filter](#option-filter) | function | null | Lock days by custom function.
+
+<autoversion/>

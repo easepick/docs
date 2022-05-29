@@ -14,6 +14,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@mr-hope/vuepress-plugin-sitemap": "^1.28.5",
     "vuepress": "^1.5.3"
   }
 }

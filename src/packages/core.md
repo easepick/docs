@@ -1,11 +1,9 @@
-<autoversion/>
-
 # @easepick/core
 
 [![npm version](https://badge.fury.io/js/@easepick%2Fcore.svg)](https://www.npmjs.com/package/@easepick/core)
 
 ::: tip
-This package does not need to be installed if you are using [@easepick/bundle](/guide/packages/bundle).
+This package does not need to be installed if you are using [@easepick/bundle](/packages/bundle).
 :::
 
 Main package of easepick.
@@ -183,3 +181,5 @@ const ampPlugin = picker.PluginManager.addInstance('AmpPlugin');
 // change plugin option
 ampPlugin.options.resetButton = true;
 ```
+
+<autoversion/>

@@ -4,7 +4,7 @@
 
 You can report issues and feature requests on [GitHub Discussions](https://github.com/easepick/easepick/discussions). This is also a good place to discuss architecture decisions and things which are not yet covered by the documentation.
 
-Refer to [Reporting issues](/guide/support/reporting-issues) guide for more details.
+Refer to [Reporting issues](/support/reporting-issues) guide for more details.
 
 ## Stack Overflow
 

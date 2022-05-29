@@ -27,129 +27,144 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: 'https://github.com/easepick/easepick/',
+    repo: '',
     editLinks: true,
     docsRepo: 'https://github.com/easepick/docs/',
     docsDir: '',
     editLinkText: '',
     lastUpdated: true,
+    activeHeaderLinks: false,
     nav: [
       {
         text: 'Guide',
         link: '/guide/',
       },
+      {
+        text: 'GitHub',
+        link: 'https://github.com/easepick/easepick/',
+      },
+      {
+        text: 'Donate',
+        link: 'https://ko-fi.com/V7V418NB3',
+      },
     ],
-    sidebar: {
-      '/guide/': [
-        {
-          title: 'Guide',
-          //collapsable: false,
-          sidebarDepth: 0,
-          children: [
-            '',
-            {
-              title: 'Development',
-              collapsable: false,
-              sidebarDepth: 0,
-              children: [
-                {
-                  title: 'Evnironment',
-                  path: '/guide/development/evnironment',
-                },
-                {
-                  title: 'Creating plugins',
-                  path: '/guide/development/plugins',
-                },
-              ]
-            },
-            {
-              title: 'Support',
-              collapsable: false,
-              sidebarDepth: 0,
-              children: [
-                {
-                  title: 'Getting support',
-                  path: '/guide/support/getting-support',
-                },
-                {
-                  title: 'Reporting issues',
-                  path: '/guide/support/reporting-issues',
-                },
-                {
-                  title: 'License',
-                  path: '/guide/support/license',
-                },
-              ]
-            },
-          ]
-        },
-        {
-          title: 'Configurator',
-          path: '/guide/configurator',
-        },
-        {
-          title: 'Packages',
-          collapsable: false,
-          sidebarDepth: 0,
-          children: [
-            {
-              title: '@easepick/bundle',
-              path: '/guide/packages/bundle',
-            },
-            {
-              title: '@easepick/base-plugin',
-              path: '/guide/packages/base-plugin',
-            },
-            {
-              title: '@easepick/datetime',
-              path: '/guide/packages/datetime',
-            },
-            {
-              title: '@easepick/core',
-              path: '/guide/packages/core',
-            },
-            {
-              title: '@easepick/amp-plugin',
-              path: '/guide/packages/amp-plugin',
-            },
-            {
-              title: '@easepick/kbd-plugin',
-              path: '/guide/packages/kbd-plugin',
-            },
-            {
-              title: '@easepick/lock-plugin',
-              path: '/guide/packages/lock-plugin',
-            },
-            {
-              title: '@easepick/range-plugin',
-              path: '/guide/packages/range-plugin',
-            },
-            {
-              title: '@easepick/preset-plugin',
-              path: '/guide/packages/preset-plugin',
-            },
-            {
-              title: '@easepick/time-plugin',
-              path: '/guide/packages/time-plugin',
-            },
-          ]
-        },
-        {
-          title: 'Examples',
-          //collapsable: false,
-          children: [
-            {
-              title: 'Basic example',
-              path: '/guide/examples/basic',
-            },
-            {
-              title: 'Basic hotel calendar',
-              path: '/guide/examples/hotel',
-            },
-          ]
-        },
-      ],
-    },
+    sidebar: [
+      {
+        title: 'Guide',
+        path: '/guide/',
+        //collapsable: false,
+        //sidebarDepth: 0,
+      },
+      {
+        title: 'Configurator',
+        path: '/configurator/',
+        collapsable: false,
+        sidebarDepth: 0,
+      },
+
+      {
+        title: 'Packages',
+        //path: '/packages/',
+        //collapsable: false,
+        //sidebarDepth: 0,
+        children: [
+          {
+            title: '@easepick/bundle',
+            path: '/packages/bundle',
+          },
+          {
+            title: '@easepick/base-plugin',
+            path: '/packages/base-plugin',
+          },
+          {
+            title: '@easepick/datetime',
+            path: '/packages/datetime',
+          },
+          {
+            title: '@easepick/core',
+            path: '/packages/core',
+          },
+          {
+            title: '@easepick/amp-plugin',
+            path: '/packages/amp-plugin',
+          },
+          {
+            title: '@easepick/kbd-plugin',
+            path: '/packages/kbd-plugin',
+          },
+          {
+            title: '@easepick/lock-plugin',
+            path: '/packages/lock-plugin',
+          },
+          {
+            title: '@easepick/range-plugin',
+            path: '/packages/range-plugin',
+          },
+          {
+            title: '@easepick/preset-plugin',
+            path: '/packages/preset-plugin',
+          },
+          {
+            title: '@easepick/time-plugin',
+            path: '/packages/time-plugin',
+          },
+        ],
+      },
+
+
+      {
+        title: 'Development',
+        //collapsable: false,
+        //sidebarDepth: 0,
+        children: [
+          {
+            title: 'Evnironment',
+            path: '/development/evnironment',
+          },
+          {
+            title: 'Creating plugins',
+            path: '/development/plugins',
+          },
+        ]
+      },
+
+      {
+        title: 'Support',
+        //collapsable: false,
+        //sidebarDepth: 0,
+        children: [
+          {
+            title: 'Getting support',
+            path: '/support/getting-support',
+          },
+          {
+            title: 'Reporting issues',
+            path: '/support/reporting-issues',
+          },
+          {
+            title: 'License',
+            path: '/support/license',
+          },
+        ]
+      },
+
+
+      {
+        title: 'Examples',
+        //collapsable: false,
+        //sidebarDepth: 0,
+        children: [
+          {
+            title: 'Basic example',
+            path: '/examples/basic',
+          },
+          {
+            title: 'Basic hotel calendar',
+            path: '/examples/hotel',
+          },
+        ]
+      },
+    ],
   },
 
   /**
@@ -158,6 +173,12 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
+    [
+      '@mr-hope/sitemap',
+      {
+        hostname: 'https://easepick.com',
+      },
+    ],
   ],
 
   head: [

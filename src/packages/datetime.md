@@ -1,11 +1,9 @@
-<autoversion/>
-
 # @easepick/datetime
 
 [![npm version](https://badge.fury.io/js/@easepick%2Fdatetime.svg)](https://www.npmjs.com/package/@easepick/datetime)
 
 ::: tip
-This package does not need to be installed if you are using [@easepick/bundle](/guide/packages/bundle).
+This package does not need to be installed if you are using [@easepick/bundle](/packages/bundle).
 :::
 
 DateTime library for `easepick`.
@@ -90,3 +88,5 @@ _Tokens are case-sensitive._
 | | mm | 01 02 … 58 59
 | Seconds | s | 1 2 … 58 59
 | | ss | 01 02 … 58 59
+
+<autoversion/>

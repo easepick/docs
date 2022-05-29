@@ -1,5 +1,8 @@
-# License and legal
+---
+editLink: false
+---
 
+# License
 
 Copyright &copy; 2021-{{ new Date().getFullYear() }}, [Rinat G.](https://github.com/wakirin)
 

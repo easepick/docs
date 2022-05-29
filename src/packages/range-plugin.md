@@ -1,11 +1,9 @@
-<autoversion/>
-
 # @easepick/range-plugin
 
 [![npm version](https://badge.fury.io/js/@easepick%2Frange-plugin.svg)](https://www.npmjs.com/package/@easepick/range-plugin)
 
 ::: tip
-This package does not need to be installed if you are using [@easepick/bundle](/guide/packages/bundle).
+This package does not need to be installed if you are using [@easepick/bundle](/packages/bundle).
 :::
 
 Adds the ability to select a range of dates.
@@ -113,3 +111,5 @@ const picker = new easepick.create({
 | [setEndDate](#method-setEndDate) |  Set end of date range. Should be Date Object or Unix Timestamp (with milliseconds) or String (must be equal to option format).
 | [getStartDate](#method-getStartDate) | Return current start of date range as [DateTime](/packages/datetime) Object.
 | [getEndDate](#method-getEndDate) |  Return current end of date range as [DateTime](/packages/datetime) Object.
+
+<autoversion/>

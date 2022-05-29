@@ -1,14 +1,12 @@
-<autoversion/>
+# @easepick/kbd-plugin
 
-# @easepick/time-plugin
-
-[![npm version](https://badge.fury.io/js/@easepick%2Ftime-plugin.svg)](https://www.npmjs.com/package/@easepick/time-plugin)
+[![npm version](https://badge.fury.io/js/@easepick%2Fkbd-plugin.svg)](https://www.npmjs.com/package/@easepick/kbd-plugin)
 
 ::: tip
-This package does not need to be installed if you are using [@easepick/bundle](/guide/packages/bundle).
+This package does not need to be installed if you are using [@easepick/bundle](/packages/bundle).
 :::
 
-Adds time picker.
+Adds keyboard navigation.
 
 ## Quick example
 
@@ -21,7 +19,7 @@ Adds time picker.
     <script src="https://cdn.jsdelivr.net/npm/@easepick/datetime@[version.number]/dist/index.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@easepick/core@[version.number]/dist/index.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@easepick/base-plugin@[version.number]/dist/index.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@easepick/time-plugin@[version.number]/dist/index.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@easepick/kbd-plugin@[version.number]/dist/index.umd.min.js"></script>
   </head>
   <body>
     <input id="datepicker"/>
@@ -30,11 +28,10 @@ Adds time picker.
         element: document.getElementById('datepicker'),
         css: [
           'https://cdn.jsdelivr.net/npm/@easepick/core@[version.number]/dist/index.css',
-          'https://cdn.jsdelivr.net/npm/@easepick/time-plugin@[version.number]/dist/index.css',
         ],
-        plugins: ['TimePlugin'],
-        TimePlugin: {
-          format: 'HH:mm',
+        plugins: ['KbdPlugin'],
+        KbdPlugin: {
+          dayIndex: 2,
         },
       });
     </script>
@@ -47,7 +44,7 @@ Adds time picker.
 #### NPM
 
 ```bash
-npm install @easepick/core @easepick/time-plugin
+npm install @easepick/core @easepick/kbd-plugin
 ```
 
 #### CDN
@@ -56,7 +53,7 @@ npm install @easepick/core @easepick/time-plugin
 <script src="https://cdn.jsdelivr.net/npm/@easepick/datetime@[version.number]/dist/index.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@easepick/core@[version.number]/dist/index.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@easepick/base-plugin@[version.number]/dist/index.umd.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@easepick/time-plugin@[version.number]/dist/index.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@easepick/kbd-plugin@[version.number]/dist/index.umd.min.js"></script>
 ```
 
 ## Usage
@@ -65,15 +62,14 @@ If you’re using a bundler, e.g. [webpack](https://webpack.js.org/):
 
 ```ts
 import { easepick } from '@easepick/core';
-import { TimePlugin } from '@easepick/time-plugin';
+import { KbdPlugin } from '@easepick/kbd-plugin';
 
 const picker = new easepick.create({
   element: document.getElementById('datepicker'),
   css: [
     'https://cdn.jsdelivr.net/npm/@easepick/core@[version.number]/dist/index.css',
-    'https://cdn.jsdelivr.net/npm/@easepick/time-plugin@[version.number]/dist/index.css',
   ],
-  plugins: [TimePlugin],
+  plugins: [KbdPlugin],
 });
 ```
 
@@ -84,9 +80,8 @@ const picker = new easepick.create({
   element: document.getElementById('datepicker'),
   css: [
     'https://cdn.jsdelivr.net/npm/@easepick/core@[version.number]/dist/index.css',
-    'https://cdn.jsdelivr.net/npm/@easepick/time-plugin@[version.number]/dist/index.css',
   ],
-  plugins: ['TimePlugin'],
+  plugins: ['KbdPlugin'],
 });
 ```
 
@@ -94,16 +89,7 @@ const picker = new easepick.create({
 
 | Name | Type | Default | Description
 | --- | :---: | :---: | ---
-| [seconds](#option-seconds) | boolean | false | Enable seconds picker.
-| [stepHours](#option-stepHours) | number | 1 | Step for hours.
-| [stepMinutes](#option-stepMinutes) | number | 5 | Step for minutes.
-| [stepSeconds](#option-stepSeconds) | number | 5 | Step for seconds.
-| [format12](#option-format12) | boolean | false | Display 12H time.
+| [unitIndex](#option-unitIndex) | number | 1 | `tabIndex` for elements except days elements.
+| [dayIndex](#option-dayIndex) | number | 2 | `tabIndex` for days elements.
 
-## Methods
-
-| Name  | Description
-| --- | ---
-| [setTime](#method-setTime) | Set a time for single date picker.
-| [setStartTime](#method-setStartTime) | Set start time of date range.
-| [setEndTime](#method-setEndTime) | Set end time of date range.
+<autoversion/>

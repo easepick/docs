@@ -1,0 +1,6 @@
+---
+editLink: false
+---
+# Configurator
+
+<configurator/>

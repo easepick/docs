@@ -1,6 +1,6 @@
 export default {
   computed: {
-    bookedDates() {
+    dateArray() {
       const currentDate = new Date();
       const nextMonthDate = new Date();
       nextMonthDate.setMonth(nextMonthDate.getMonth() + 1);

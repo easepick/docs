@@ -1,5 +1,3 @@
-<autoversion/>
-
 # Basic example
 
 ### Demo
@@ -29,3 +27,5 @@
   </body>
 </html>
 ```
+
+<autoversion/>

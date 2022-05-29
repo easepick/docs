@@ -1,17 +1,15 @@
-<autoversion/>
-
 # @easepick/preset-plugin
 
 [![npm version](https://badge.fury.io/js/@easepick%2Fpreset-plugin.svg)](https://www.npmjs.com/package/@easepick/preset-plugin)
 
 ::: tip
-This package does not need to be installed if you are using [@easepick/bundle](/guide/packages/bundle).
+This package does not need to be installed if you are using [@easepick/bundle](/packages/bundle).
 :::
 
 Adds predefined ranges.  
 
 ### Required:
-* [@easepick/range-plugin](/guide/packages/range-plugin)
+* [@easepick/range-plugin](/packages/range-plugin)
 
 ## Quick example
 
@@ -106,3 +104,5 @@ const picker = new easepick.create({
 | [customPreset](#option-customPreset) | object | null | Define your own ranges.
 | [customLabels](#option-customLabels) | ['Today', 'Yesterday',<br/> 'Last 7 Days', 'Last 30 Days',<br/> 'This Month', 'Last Month'] | null | Define your own labels.
 | [position](#option-position) | string | 'left' | Position of preset block.
+
+<autoversion/>

@@ -1,7 +1,7 @@
 const gh = {
   version: null,
 
-  get_tags() {
+  async get_tags() {
     const stored = JSON.parse(localStorage.getItem('version'));
     if (stored && stored.d === (new Date).getDate()) {
       return new Promise((resolve, reject) => {
@@ -9,8 +9,8 @@ const gh = {
       });
     }
 
-    return fetch('https://api.github.com/repos/easepick/easepick/tags')
-      .then(r => r.json());
+    const r = await fetch('https://api.github.com/repos/easepick/easepick/tags');
+    return await r.json();
   },
 
   find_latest_tag(tags) {
@@ -46,22 +46,47 @@ const gh = {
 
     favicon.setAttribute('href', '/favicon/' + date + '.png');
   },
+
+  kofi() {
+    const buttons = [...document.querySelectorAll('a[href="https://ko-fi.com/V7V418NB3"]')];
+
+    if (buttons.length) {
+      buttons.forEach((button) => {
+        const a = document.createElement('a');
+        a.title = 'Support me on ko-fi.com';
+        a.href = 'https://ko-fi.com/V7V418NB3';
+        a.target = '_blank';
+        a.className = 'kofi-button nav-link external';
+        a.innerHTML = `<img src="https://storage.ko-fi.com/cdn/cup-border.png" class="kofiimg"> Donate`;
+        button.replaceWith(a);
+      });
+    } else {
+      setTimeout(gh.kofi, 300);
+    }
+  },
+
+  initialize() {
+    gh.favicon();
+    gh.kofi();
+
+    gh.get_tags()
+      .then(r => {
+        if (Array.isArray(r)) {
+          return gh.find_latest_tag(r);
+        }
+        return r;
+      })
+      .then(r => {
+        if (r) {
+          gh.version = r;
+          gh.add_script('https://cdn.jsdelivr.net/npm/@easepick/bundle@' + r + '/dist/index.umd.min.js');
+        }
+      });
+  },
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  gh.favicon();
-
-  gh.get_tags()
-    .then(r => {
-      if (Array.isArray(r)) {
-        return gh.find_latest_tag(r);
-      }
-      return r;
-    })
-    .then(r => {
-      if (r) {
-        gh.version = r;
-        gh.add_script('https://cdn.jsdelivr.net/npm/@easepick/bundle@' + r + '/dist/index.umd.min.js');
-      }
-    });
-});
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', gh.initialize);
+} else {
+  gh.initialize();
+}

@@ -13,13 +13,15 @@
       </p>
 
       <div class="hero-easepick" style="min-height: 300px">
-        <easepick
-          :options="easepick_options"
-          :input_styles="{ display: 'none' }"
-          @ready="easepick_loading = false"
-        />
+        <ClientOnly>
+          <easepick
+            :options="easepick_options"
+            :input_styles="{ display: 'none' }"
+            @ready="easepick_loading = false"
+          />
+        </ClientOnly>
 
-        <Spinner v-if="easepick_loading" />
+        <spinner v-if="easepick_loading" />
       </div>
 
       <p v-if="data.actionText && data.actionLink" class="action">

@@ -1,5 +1,3 @@
-<autoversion/>
-
 # @easepick/bundle
 
 [![npm version](https://badge.fury.io/js/@easepick%2Fbundle.svg)](https://www.npmjs.com/package/@easepick/bundle)
@@ -65,4 +63,6 @@ const picker = new easepick.create({
 ```
 
 ## Options
-See options in [@easepick/core](/guide/packages/core#options) and other packages.
+See options in [@easepick/core](/packages/core) and other packages.
+
+<autoversion/>

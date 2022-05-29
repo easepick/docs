@@ -1,14 +1,16 @@
 <template>
   <div>
-    <easepick :options="easepick_options" />
+    <ClientOnly>
+      <easepick :options="easepick_options" />
+    </ClientOnly>
   </div>
 </template>
 
 <script>
-import BookedMixin from "../../mixins/booked.js";
+import DateArrayMixin from "../../mixins/dates.js";
 
 export default {
-  mixins: [BookedMixin],
+  mixins: [DateArrayMixin],
   data() {
     return {};
   },
@@ -23,7 +25,7 @@ export default {
         zIndex: 10,
         setup(picker) {
           const DateTime = easepick.DateTime;
-          gh.bookedDates = self.bookedDates.map((d) => {
+          gh.bookedDates = self.dateArray.map((d) => {
             if (d instanceof Array) {
               const start = new DateTime(d[0], "YYYY-MM-DD");
               const end = new DateTime(d[1], "YYYY-MM-DD");

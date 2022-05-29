@@ -1,6 +1,8 @@
 <template>
   <div>
-    <easepick :options="easepick_options" />
+    <ClientOnly>
+      <easepick :options="easepick_options" />
+    </ClientOnly>
   </div>
 </template>
 
@@ -10,7 +12,7 @@ export default {
     return {
       easepick_options: {
         zIndex: 10,
-      }
+      },
     };
   },
 };
