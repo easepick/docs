@@ -182,4 +182,6 @@ const ampPlugin = picker.PluginManager.addInstance('AmpPlugin');
 ampPlugin.options.resetButton = true;
 ```
 
-<autoversion/>
+<ClientOnly>
+  <autoversion/>
+</ClientOnly>

@@ -65,4 +65,6 @@ const picker = new easepick.create({
 ## Options
 See options in [@easepick/core](/packages/core) and other packages.
 
-<autoversion/>
+<ClientOnly>
+  <autoversion/>
+</ClientOnly>

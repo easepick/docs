@@ -1,7 +1,9 @@
 <template>
   <div>
     <div id="app-configurator" :class="{ loading: isLoading }">
-      <spinner v-if="isLoading" />
+      <ClientOnly>
+        <spinner v-if="isLoading" />
+      </ClientOnly>
       <div class="app-picker-layout">
         <div>
           <input id="app-picker" />

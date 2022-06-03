@@ -92,4 +92,6 @@ const picker = new easepick.create({
 | [unitIndex](#option-unitIndex) | number | 1 | `tabIndex` for elements except days elements.
 | [dayIndex](#option-dayIndex) | number | 2 | `tabIndex` for days elements.
 
-<autoversion/>
+<ClientOnly>
+  <autoversion/>
+</ClientOnly>

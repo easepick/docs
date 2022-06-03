@@ -105,4 +105,6 @@ const picker = new easepick.create({
 | [customLabels](#option-customLabels) | ['Today', 'Yesterday',<br/> 'Last 7 Days', 'Last 30 Days',<br/> 'This Month', 'Last Month'] | null | Define your own labels.
 | [position](#option-position) | string | 'left' | Position of preset block.
 
-<autoversion/>
+<ClientOnly>
+  <autoversion/>
+</ClientOnly>

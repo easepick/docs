@@ -21,7 +21,9 @@
           />
         </ClientOnly>
 
-        <spinner v-if="easepick_loading" />
+        <ClientOnly>
+          <spinner v-if="easepick_loading" />
+        </ClientOnly>
       </div>
 
       <p v-if="data.actionText && data.actionLink" class="action">

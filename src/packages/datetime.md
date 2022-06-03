@@ -89,4 +89,6 @@ _Tokens are case-sensitive._
 | Seconds | s | 1 2 … 58 59
 | | ss | 01 02 … 58 59
 
-<autoversion/>
+<ClientOnly>
+  <autoversion/>
+</ClientOnly>

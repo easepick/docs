@@ -106,4 +106,6 @@ const picker = new easepick.create({
 | [setStartTime](#method-setStartTime) | Set start time of date range.
 | [setEndTime](#method-setEndTime) | Set end time of date range.
 
-<autoversion/>
+<ClientOnly>
+  <autoversion/>
+</ClientOnly>

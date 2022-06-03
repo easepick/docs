@@ -112,4 +112,6 @@ const picker = new easepick.create({
 | [getStartDate](#method-getStartDate) | Return current start of date range as [DateTime](/packages/datetime) Object.
 | [getEndDate](#method-getEndDate) |  Return current end of date range as [DateTime](/packages/datetime) Object.
 
-<autoversion/>
+<ClientOnly>
+  <autoversion/>
+</ClientOnly>

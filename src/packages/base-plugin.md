@@ -8,4 +8,6 @@ This package does not need to be installed if you are using [@easepick/bundle](/
 
 _in progress_
 
-<autoversion/>
+<ClientOnly>
+  <autoversion/>
+</ClientOnly>

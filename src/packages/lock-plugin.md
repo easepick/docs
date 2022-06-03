@@ -102,4 +102,6 @@ const picker = new easepick.create({
 | [inseparable](#option-inseparable) | boolean | false | Disable date range selection with locked days.
 | [filter](#option-filter) | function | null | Lock days by custom function.
 
-<autoversion/>
+<ClientOnly>
+  <autoversion/>
+</ClientOnly>

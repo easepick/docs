@@ -3,7 +3,9 @@ editLink: false
 ---
 # Configurator <sup class="text-red">β</sup>
 
-<configurator/>
+<ClientOnly>
+  <configurator/>
+</ClientOnly>
 
 <div id="script-code-sample" style="display: none">
 

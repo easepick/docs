@@ -28,4 +28,6 @@
 </html>
 ```
 
-<autoversion/>
+<ClientOnly>
+  <autoversion/>
+</ClientOnly>
