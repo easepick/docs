@@ -14,5 +14,5 @@ jobs:
         TARGET_REPO: easepick/docs
         TARGET_BRANCH: master
         BUILD_SCRIPT: npm install && npm run build
-        BUILD_DIR: .vuepress/dist
+        BUILD_DIR: src/.vuepress/dist
         CNAME: https://easepick.com
