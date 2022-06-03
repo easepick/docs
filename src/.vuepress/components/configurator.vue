@@ -109,12 +109,12 @@ export default {
         this.isLoading = true;
 
         gh.add_script(
-          "https://cdn.jsdelivr.net/npm/@easepick/configurator@1.0.7/dist/index.js",
+          "https://cdn.jsdelivr.net/npm/@easepick/configurator/dist/index.js",
           () => {
             gh.configurator();
 
             gh.add_stylesheet(
-              "https://cdn.jsdelivr.net/npm/@easepick/configurator@1.0.7/dist/index.css",
+              "https://cdn.jsdelivr.net/npm/@easepick/configurator/dist/index.css",
               () => {
                 this.isLoading = false;
               }
