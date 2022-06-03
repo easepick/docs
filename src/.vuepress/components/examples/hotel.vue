@@ -11,9 +11,6 @@ import DateArrayMixin from "../../mixins/dates.js";
 
 export default {
   mixins: [DateArrayMixin],
-  data() {
-    return {};
-  },
   computed: {
     easepick_options() {
       const self = this;

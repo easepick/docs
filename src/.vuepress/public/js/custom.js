@@ -1,5 +1,6 @@
 const gh = {
   version: null,
+  configurator: false,
 
   async get_tags() {
     const stored = JSON.parse(localStorage.getItem('version'));
@@ -38,6 +39,14 @@ const gh = {
     script.async = true;
     script.onload = cb || (() => { });
     document.head.appendChild(script);
+  },
+
+  add_stylesheet(href, cb) {
+    const link = document.createElement('link');
+    link.href = href;
+    link.rel = 'stylesheet';
+    link.onload = cb || (() => { });
+    document.head.appendChild(link);
   },
 
   favicon() {

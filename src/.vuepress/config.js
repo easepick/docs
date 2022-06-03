@@ -162,6 +162,26 @@ module.exports = {
             title: 'Basic hotel calendar',
             path: '/examples/hotel',
           },
+          {
+            title: 'Show nights in tooltip',
+            path: '/examples/nights',
+          },
+          {
+            title: 'Using another language',
+            path: '/examples/language',
+          },
+          {
+            title: 'Allowed days',
+            path: '/examples/allowed-days',
+          },
+          {
+            title: 'Days with prices',
+            path: '/examples/days-with-prices',
+          },
+          {
+            title: 'Customize',
+            path: '/examples/customize',
+          },
         ]
       },
     ],

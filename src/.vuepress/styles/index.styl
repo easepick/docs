@@ -4,13 +4,10 @@
  * ref：https://v1.vuepress.vuejs.org/config/#index-styl
  */
 
-.nav-links 
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
+input
+  box-sizing: border-box;
 
-
-input 
+input[type="text"] 
   height: 2rem;
   width: 200px;
   color: #4e6e8e;
@@ -23,19 +20,17 @@ input
   outline: none;
   transition: all 0.2s ease;
 
+.text-red 
+  color: #f44336;
+
 
 a.kofi-button
   display: flex !important;
   align-items: center;
   column-gap: 10px;
   white-space: nowrap;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
   text-decoration: none;
-  background-color: #29abe0;
-  color: #fff !important;
-  padding: 3px 20px;
-  border-radius: 5px;
-  font-size: 13px;
+  background-color: transparent;
 
 .sidebar a.kofi-button   
   max-width: 100px;

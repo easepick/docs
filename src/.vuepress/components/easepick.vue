@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input :id="id" />
+    <input type="text" :id="id" />
   </div>
 </template>
 

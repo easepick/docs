@@ -1,22 +1,142 @@
 <template>
   <div>
+    <div id="app-configurator" :class="{ loading: isLoading }">
+      <spinner v-if="isLoading" />
+      <div class="app-picker-layout">
+        <div>
+          <input id="app-picker" />
+          <input id="app-picker-end" />
+        </div>
+      </div>
+      <div class="app-wrapper">
+        <div class="packages-list"></div>
+        <div class="package-options">
+          <div class="pkg-options-content"></div>
+        </div>
+      </div>
+
+      <div class="custom-block tip">
+        <p>Currently some options may not be available in the configurator.</p>
+        <p>
+          <span>You want to display all options anyway ?</span>
+          <a href="#" id="yes-btn">Yes</a> <a href="#" id="no-btn">No</a>
+        </p>
+      </div>
+
+      <h2 id="installation">
+        <a href="#installation" class="header-anchor"># </a>
+        Installation
+      </h2>
+
+      <div class="package-install">
+        <div class="tabs-wrapper tabs-horizontal">
+          <div class="tabs uppercase">
+            <div class="tab active">
+              <input type="radio" name="package_install" checked />
+              bundle
+            </div>
+            <div class="tab">
+              <input type="radio" name="package_install" />
+              modular
+            </div>
+          </div>
+          <div class="contents">
+            <div class="tab-content active">
+              <div class="tabs-wrapper tabs-vertical">
+                <div class="tabs uppercase">
+                  <div class="tab active">npm</div>
+                  <div class="tab">cdn</div>
+                </div>
+                <div class="contents bg">
+                  <div class="tab-content active" id="bundle-npm">
+                    bundle npm
+                  </div>
+                  <div class="tab-content" id="bundle-cdn">bundle cdn</div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content">
+              <div class="tabs-wrapper tabs-vertical">
+                <div class="tabs uppercase">
+                  <div class="tab active">npm</div>
+                  <div class="tab">cdn</div>
+                </div>
+                <div class="contents bg">
+                  <div class="tab-content active" id="modular-npm">
+                    modular npm
+                  </div>
+                  <div class="tab-content" id="modular-cdn">modular cdn</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 id="quick-example">
+        <a href="#quick-example" class="header-anchor">#</a>
+        Quick example
+      </h2>
+
+      <div class="language-html extra-class">
+        <pre class="language-html"><code id="quick-example-code"></code></pre>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
-  export default {
-    mounted() {
-      this.init();
-    },
-    methods: {
-      init() {
-        if (typeof gh !== 'undefined') {
-          //gh.add_script('');
-          console.log('add_script');
-        } else {
-          setTimeout(this.init, 300);
+export default {
+  data() {
+    return {
+      isLoading: false,
+      script_code: `&ltscript src="__URL__"&gt;&lt;/script&gt;`,
+    };
+  },
+  mounted() {
+    this.init();
+  },
+  methods: {
+    init() {
+      if (typeof gh !== "undefined" && typeof easepick !== "undefined") {
+        if (gh.configurator) {
+          gh.configurator();
+          return;
         }
+
+        this.isLoading = true;
+
+        gh.add_script(
+          "https://cdn.jsdelivr.net/npm/@easepick/configurator@1.0.7/dist/index.js",
+          () => {
+            gh.configurator();
+
+            gh.add_stylesheet(
+              "https://cdn.jsdelivr.net/npm/@easepick/configurator@1.0.7/dist/index.css",
+              () => {
+                this.isLoading = false;
+              }
+            );
+          }
+        );
+      } else {
+        setTimeout(this.init, 300);
       }
-    }
-  }
+    },
+  },
+};
 </script>
+
+<style scoped lang="stylus">
+#app-configurator.loading {
+  position: relative;
+  max-height: 150px;
+  overflow: hidden;
+}
+
+#app-configurator .spinner-layout {
+  position: absolute;
+  inset: 0;
+  background-color: #fff;
+}
+</style>
