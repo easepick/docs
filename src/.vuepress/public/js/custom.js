@@ -94,8 +94,17 @@ const gh = {
   },
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', gh.initialize);
-} else {
-  gh.initialize();
+const wait = () => {
+  if (document.documentElement.dataset.mounted === 'true') {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', gh.initialize);
+    } else {
+      gh.initialize();
+    }
+    return;
+  }
+
+  setTimeout(wait, 300);
 }
+
+wait();
