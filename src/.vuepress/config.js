@@ -118,8 +118,8 @@ module.exports = {
         //sidebarDepth: 0,
         children: [
           {
-            title: 'Evnironment',
-            path: '/development/evnironment',
+            title: 'Environment',
+            path: '/development/environment',
           },
           {
             title: 'Creating plugins',
