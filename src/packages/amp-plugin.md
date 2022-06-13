@@ -27,7 +27,7 @@ Adds extra options.
       const picker = new easepick.create({
         element: document.getElementById('datepicker'),
         css: [
-          'https://cdn.jsdelivr.net/npm/@easepick/core@[version.number]/dist/index.css',
+          'https://cdn.jsdelivr.net/npm/@easepick/bundle@[version.number]/dist/index.css',
         ],
         plugins: ['AmpPlugin'],
         AmpPlugin: {
@@ -70,7 +70,7 @@ import { AmpPlugin } from '@easepick/amp-plugin';
 const picker = new easepick.create({
   element: document.getElementById('datepicker'),
   css: [
-    'https://cdn.jsdelivr.net/npm/@easepick/core@[version.number]/dist/index.css',
+    'https://cdn.jsdelivr.net/npm/@easepick/bundle@[version.number]/dist/index.css',
   ],
   plugins: [AmpPlugin],
 });
@@ -82,7 +82,7 @@ Another way to initialize `easypick`:
 const picker = new easepick.create({
   element: document.getElementById('datepicker'),
   css: [
-    'https://cdn.jsdelivr.net/npm/@easepick/core@[version.number]/dist/index.css',
+    'https://cdn.jsdelivr.net/npm/@easepick/bundle@[version.number]/dist/index.css',
   ],
   plugins: ['AmpPlugin'],
 });
