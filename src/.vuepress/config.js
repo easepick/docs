@@ -30,7 +30,7 @@ module.exports = {
     repo: '',
     editLinks: true,
     docsRepo: 'https://github.com/easepick/docs/',
-    docsDir: '',
+    docsDir: 'src',
     editLinkText: '',
     lastUpdated: true,
     activeHeaderLinks: false,
