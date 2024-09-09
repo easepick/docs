@@ -97,6 +97,7 @@ const picker = new easepick.create({
 | [stepMinutes](#option-stepMinutes) | number | 5 | Step for minutes.
 | [stepSeconds](#option-stepSeconds) | number | 5 | Step for seconds.
 | [format12](#option-format12) | boolean | false | Display 12H time.
+| [native](#option-native) | boolean | false | This allows you to use input fields with the type=“time” instead of the select boxes
 
 ## Methods
 
